@@ -1,0 +1,14 @@
+csv_in/*
+csv_out/*
+n_localization
+n_location
+n_undefined
+n_undefined_notpassedconsistencycheck
+n_undefined_passedconsistencycheck
+resources.py
+openehr/mappings/*
+openehr/queries.py
+openehr/process.py.forinfo
+openehr/destinations/bbmri_directory/out/*
+openehr/destinations/bbmri_directory/resources/*
+__pycache__
