@@ -27,51 +27,51 @@ age_range_categories = {
 
 def add_missing_diseases(bbmri_dir_file, disease_types):
     #Add * to directory excel file
-    asterisk_row=["*", "*", "", "", "", "", "", "", ""]
+    asterisk_row=["*", "Any", "", "", "", "", "", "", ""]
     missing_diseases_bbmri_df = pd.DataFrame([asterisk_row])
     append_df_to_excel(bbmri_dir_file, missing_diseases_bbmri_df, sheet_name='eu_bbmri_eric_disease_types',
                        index=False)  # Append another "df" to the sheet "Cool" starting from col 5
 
 
     #Add * to directory csv file
-    asterisk_row=[np.nan,"*", "*", np.nan, np.nan, "*", np.nan, np.nan, np.nan, np.nan,np.nan]
+    asterisk_row=[np.nan,"*", "Any", np.nan, np.nan, "*", np.nan, np.nan, np.nan, np.nan,np.nan]
     disease_types.loc[len(disease_types.index)] = asterisk_row
     
     return disease_types
 
 def add_missing_material_types(bbmri_dir_file,material_types):
     #Add * to directory excel file
-    asterisk_row=["*", "*", "", ""]
+    asterisk_row=["*", "Any", "", ""]
     missing_materials_bbmri_df = pd.DataFrame([asterisk_row])
     append_df_to_excel(bbmri_dir_file, missing_materials_bbmri_df, sheet_name='eu_bbmri_eric_material_types',
                        index=False)  # Append another "df" to the sheet "Cool" starting from col 5
 
     #Add * to directory csv file
-    asterisk_row=[np.nan,"*", "*", np.nan, np.nan,"*",np.nan,np.nan]
+    asterisk_row=[np.nan,"*", "Any", np.nan, np.nan,"*",np.nan,np.nan]
     material_types.loc[len(material_types.index)] = asterisk_row
     return material_types 
 
 def add_missing_sex_types(bbmri_dir_file,sex_types):
     #Add asterisk to directory excel file
-    asterisk_row=["*", "*", "", "", ""]
+    asterisk_row=["*", "Any", "", "", ""]
     missing_sex_bbmri_df = pd.DataFrame([asterisk_row])
     append_df_to_excel(bbmri_dir_file, missing_sex_bbmri_df, sheet_name='eu_bbmri_eric_sex_types',
                        index=False)  
 
     #Add asterisk to directory csv file
-    asterisk_row=[np.nan,"*", "*", np.nan, np.nan,"*",np.nan,np.nan]
+    asterisk_row=[np.nan,"*", "Any", np.nan, np.nan,"*",np.nan,np.nan]
     sex_types.loc[len(sex_types.index)] = asterisk_row 
     return sex_types 
 
 def add_missing_age_ranges(bbmri_dir_file,age_ranges):
     #Add asterisk to directory excel file
-    asterisk_row=["*", "*", "", "", ""]
+    asterisk_row=["*", "Any", "", "", ""]
     missing_age_ranges_bbmri_df = pd.DataFrame([asterisk_row])
     append_df_to_excel(bbmri_dir_file, missing_age_ranges_bbmri_df, sheet_name='eu_bbmri_eric_AgeRanges',
                        index=False)  
 
     #Add asterisk to directory csv file
-    asterisk_row=[np.nan,"*", "*", np.nan, np.nan,"*",np.nan,np.nan]
+    asterisk_row=[np.nan,"*", "Any", np.nan, np.nan,"*",np.nan,np.nan]
     age_ranges.loc[len(age_ranges.index)] = asterisk_row 
     return age_ranges 
 
